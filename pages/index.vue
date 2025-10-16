@@ -2,21 +2,34 @@
   <div>
     <!-- Preloader -->
     <Preloader v-if="showPreloader" @done="handlePreloaderDone" />
-    <div :class="[
-      showPreloader ? 'opacity-0 pointer-events-none' : 'opacity-100',
-      'transition-opacity duration-500 ease-out'
-    ]">
+
+    <div
+      :class="[
+        showPreloader ? 'opacity-0 pointer-events-none' : 'opacity-100',
+        'transition-opacity duration-500 ease-out'
+      ]"
+    >
       <HomeHero />
       <WWD />
       <Testimonials />
       <FAQ />
       <Footer />
     </div>
+
+    <!-- Scroll to Top Button -->
+    <button
+      v-show="showScrollTop"
+      @click="scrollToTop"
+      class="fixed bottom-6 cursor-pointer right-6 z-50 bg-[#570000] text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300"
+      aria-label="Scroll to top"
+    >
+      ▲
+    </button>
   </div>
 </template>
 
 <script setup>
-import { ref, nextTick } from 'vue'
+import { ref, nextTick, onMounted, onUnmounted } from 'vue'
 import { useNuxtApp } from '#app'
 import Preloader from '~/components/Preloader.vue'
 import HomeHero from '~/components/HomeHero.vue'
@@ -26,6 +39,7 @@ import FAQ from '~/components/FAQ.vue'
 import Footer from '~/components/Footer.vue'
 
 const showPreloader = ref(true)
+const showScrollTop = ref(false)
 const { $restoreScrollNow } = useNuxtApp()
 
 async function handlePreloaderDone() {
@@ -35,12 +49,27 @@ async function handlePreloaderDone() {
     showPreloader.value = false
   })
 }
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+function handleScroll() {
+  showScrollTop.value = window.scrollY > 300
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
-
-
-
-
 <style scoped>
-/* Optional: make transitions smoother if needed */
+button[aria-label="Scroll to top"] {
+  font-size: 20px;
+  line-height: 1;
+}
 </style>
