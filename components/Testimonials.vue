@@ -1,11 +1,11 @@
 <template>
-  <section ref="rootRef" class="relative w-full bg-[#75C0FE] py-[80px]">
+  <section ref="rootRef" class="relative w-full bg-[#aed9e0] py-[80px]">
     <div class="text-center max-w-[1190px] mx-auto">
       <!-- Title animates like WWD via AnimatedSplit -->
       <AnimatedSplit
         ref="titleRef"
         tag="h2"
-        wrap-class="uppercase text-[120px] text-[#1a1a1a] leading-[1]"
+        wrap-class="uppercase text-[62px] text-[#1a1a1a] leading-[1]"
         text="Testimonials"
         :duration="0.9"
         :char-stagger="0.02"
@@ -148,21 +148,21 @@ onBeforeUnmount(() => {
 
 const testimonials = [
   {
-    name: 'John Smith',
+    name: 'Samir Virani',
     title: 'CEO and Founder',
-    quote: 'Our engagement tripled in months. Social Sparrow made it happen.',
+    quote: "Social Sparrow & Nishi have been outstanding with their hard work and creativity in social media marketing. Truly impressed with their results and highly recommend everyone to sign up with them!",
     photo: '/images/john-smith.jpg',
     linkedin: '#',
-    bg: 'bg-[#FFC501]',
+    bg: 'bg-[#ffb703]',
   },
   {
-    name: 'Jane Doe',
+    name: 'Chirag, Arcanis Shoes',
     title: 'Director of Operations',
     quote:
-      '7+ years of experience in project management and team leadership. Strong organizational and communication skills.',
+      'Ever since Social Sparrow got on board for handling our social media pages, there has been significant increase in customer reach and leads generation, all of it Combining with consistency and dedication, Social Sparrow has been a significant asset to our digital marketing journey',
     photo: '/images/jane-doe.jpg',
     linkedin: '#',
-    bg: 'bg-[#00C2FF]',
+    bg: 'bg-[#457b9d]',
   },
   {
     name: 'Michael Brown',
@@ -171,7 +171,7 @@ const testimonials = [
       '5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization.',
     photo: '/images/michael-brown.jpg',
     linkedin: '#',
-    bg: 'bg-[#FFC501]',
+    bg: 'bg-[#ffb703]',
   },
   {
     name: 'Emily Johnson',
@@ -180,7 +180,7 @@ const testimonials = [
       '3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis.',
     photo: '/images/emily-johnson.jpg',
     linkedin: '#',
-    bg: 'bg-[#00C2FF]',
+    bg: 'bg-[#457b9d]',
   },
   {
     name: 'Brian Williams',
@@ -189,7 +189,7 @@ const testimonials = [
       '4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement.',
     photo: '/images/brian-williams.jpg',
     linkedin: '#',
-    bg: 'bg-[#FFC501]',
+    bg: 'bg-[#ffb703]',
   },
   {
     name: 'Sarah Kim',
@@ -198,7 +198,7 @@ const testimonials = [
       '2+ years of experience in writing and editing. Skilled in creating compelling, SEO-optimized content for various industries.',
     photo: '/images/sarah-kim.jpg',
     linkedin: '#',
-    bg: 'bg-[#00C2FF]',
+    bg: 'bg-[#457b9d]',
   },
 ]
 </script>

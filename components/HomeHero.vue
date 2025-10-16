@@ -1,12 +1,12 @@
 <template>
-  <section ref="heroRoot" class="relative w-full min-h-[100vh] bg-[#ffd000] ">
+  <section ref="heroRoot" class="relative w-full min-h-[100vh] bg-[#ffb703] ">
     <div class="flex flex-col py-[100px] items-center max-w-[1190px] text-center mx-auto overflow-hidden">
       <!-- Title -->
       <AnimatedSplit
         ref="titleRef"
         tag="h1"
-        wrap-class="relative z-[2] mb-[80px] mt-[40px] leading-[0.9] text-[clamp(40px,15vw,230px)] font-bold uppercase text-[#EF1525]"
-        text="We Grow Brands from ‘0’ to Hero"
+        wrap-class="relative z-[2] mb-[80px] mt-[40px] leading-[0.9] text-[clamp(40px,15vw,140px)] font-bold uppercase text-[#023047]"
+        text="Your brand has a voice. We make sure it’s heard."
         :duration="1.0"
         :char-stagger="0.028"
       />
@@ -20,14 +20,14 @@
         <AnimatedSplit
           ref="seizeRef"
           tag="h2"
-          wrap-class="mb-[40px] leading-[0.9] text-[clamp(36px,10vw,120px)] font-bold uppercase text-[#FF9900]"
-          text="Seize The Day"
+          wrap-class="mb-[40px] leading-[0.9] text-[clamp(36px,10vw,62px)] font-bold uppercase text-[#023047]"
+          text="we don’t just manage brands, we give them wings. 🪶"
           :duration="0.9"
           :char-stagger="0.02"
         />
 
-        <h2 class="text-center max-w-[700px] mx-auto text-[#ce630c] text-[32px] leading-[1]">
-          From strategy to execution, Social Sparrow helps you connect, engage, and convert your audience—one powerful post at a time.
+        <h2 class="text-center max-w-[700px] mx-auto text-[#2e5369] text-[26px] leading-[1]">
+          Think of us as your creative partner who dreams with you, plans for you, and executes like magic. From scroll-stopping content to out of the box designs, campaigns & experiences, we make sure your brand doesn’t just show up, it shows off.
         </h2>
       </div>
 

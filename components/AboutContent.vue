@@ -1,5 +1,5 @@
 <template>
-    <div ref="root" class="relative w-full bg-[#ebff57] py-[80px] border-t-[1px] border-[#1a1a1a]">
+    <div ref="root" class="relative w-full bg-[#d3e4cd] py-[80px] border-t-[1px] border-[#1a1a1a]">
       <div class="max-w-[1190px] mx-auto">
         <div class="flex gap-[30px] justify-between">
           <!-- Title (AnimatedSplit) -->
@@ -7,7 +7,7 @@
             <AnimatedSplit
               ref="titleRef"
               tag="h2"
-              wrap-class="uppercase text-[60px] leading-[1.2] text-[#1a1a1a]"
+              wrap-class="uppercase text-[42px] leading-[1.2] text-[#1a1a1a]"
               text="Social Sparrow - Your partner in digital growth"
               :duration="0.8"
               :char-stagger="0.02"

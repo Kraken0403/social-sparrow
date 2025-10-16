@@ -1,9 +1,9 @@
 <template>
-    <div class="w-full py-[80px] bg-[#897bff]">
+    <div class="w-full py-[80px] bg-[#457b9d]">
       <div class="max-w-[992px] mx-auto">
         <!-- Section heading -->
         <div class="pb-[80px] border-b-1 border-[#1a1a1a]">
-          <h2 class="uppercase text-[120px] text-[#1a1a1a]">CHECK EM OUT!!!</h2>
+          <h2 class="uppercase text-[62px] leading-[0.9] text-[#1a1a1a]">CHECK EM OUT!!!</h2>
         </div>
   
         <!-- Service rows -->

@@ -7,7 +7,7 @@
         ref="titleRef"
         :text="'ABOUT US'"
         tag="h1"
-        class="title-split"
+        class="relative z-[2] leading-[0.9] text-[clamp(40px,15vw,140px)] font-bold"
         :duration="0.9"
         :char-stagger="0.028"
         :autoplay="false"  
@@ -205,7 +205,8 @@ onBeforeUnmount(() => {
 .about-hero {
   position: relative;
   height: 100vh;
-  background: #ebff57;
+  /* background: #ebff57; */
+  background: #d3e4cd;
   overflow: hidden;
 }
 

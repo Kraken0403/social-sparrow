@@ -9,10 +9,10 @@
               :key="`c-${wi}-${ci}`"
               class="char inline-block"
             >{{ ch }}</span>
-          </span>
+          </span>&nbsp;
         </span>
         <!-- natural space after each word -->
-        <span class="inline-block" aria-hidden="true">&nbsp;</span>
+        <!-- <span class="inline-block" aria-hidden="true">&nbsp;</span> -->
       </span>
   
       <span class="sr-only">{{ text }}</span>

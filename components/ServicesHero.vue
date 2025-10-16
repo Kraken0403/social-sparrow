@@ -6,7 +6,7 @@
         ref="titleRef"
         :text="'Our Services'"
         tag="h1"
-        class="title-split"
+        class="leading-[0.9] text-[#023047] text-[clamp(40px,15vw,140px)]"
         :duration="0.9"
         :char-stagger="0.028"
         :autoplay="false"
@@ -68,7 +68,7 @@ onBeforeUnmount(() => {
 .services-hero {
   position: relative;
   height: 85vh;
-  background: #897bff; /* tweak as needed */
+  background: #457b9d; /* tweak as needed */
   overflow: hidden;
 }
 

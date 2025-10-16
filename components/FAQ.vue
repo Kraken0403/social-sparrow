@@ -3,7 +3,7 @@
         <div class="border-[1px] border-[#000] max-w-[1190px] p-[30px] mx-auto flex flex-row lg:flex-row w-full h-auto bg-white rounded-[16px] overflow-hidden">
             <!-- Sidebar -->
             <div class="w-full lg:w-[35%] p-6 bg-white">
-                <h2 class="text-[120px] lg:text-[120px] font-black mb-8 leading-none">FAQs.</h2>
+                <h2 class="text-[62px] lg:text-[62px] font-black mb-8 leading-none">FAQs.</h2>
         
                 <div class="space-y-4">
                 <button
@@ -37,28 +37,28 @@
   
   const faqs = ref([
     {
-      question: 'What is social sparrow',
-      answer: `Social Sparrow is a technology company that provides logistics services to both vendors and consumers. This potentially allows food vendors to deliver meals seamlessly while also providing consumers with an easy platform to order meals from their favourite restaurants in their city.`
+      question: 'What exactly does Social Sparrow📸 do?',
+      answer: `We turn brands into conversations. From social media to shoots, product styling to strategy & designs, we don’t just “manage,” we create noise that gets remembered.`
     },
     {
-      question: 'Demo question',
-      answer: 'This is a placeholder answer for the demo question.'
+      question: 'Do you only handle social media?',
+      answer: 'Nope. Social Sparrow📸 is a full nest of 24+ services. Social media is just one branch, we also do design, campaigns, events, and more.'
     },
     {
-      question: 'Demo question',
-      answer: 'This is a placeholder answer for the demo question.'
+      question: 'Can small businesses work with you?',
+      answer: 'Absolutely. Whether you’re a one-person hustle or a giant enterprise, we build ideas that fit your budget and your brand’s voice.'
     },
     {
-      question: 'Demo question',
-      answer: 'This is a placeholder answer for the demo question.'
+      question: 'How soon will I see results?',
+      answer: 'Think of us like planting seeds. 🌱 Some results show fast (hello engagement!) and some take a little nurturing (sales, community). We promise: it’s always worth the wait.'
     },
     {
-      question: 'Demo question',
-      answer: 'This is a placeholder answer for the demo question.'
+      question: 'Why the name Social Sparrow📸?',
+      answer: 'Social Sparrow📸 was born out of quirk, creativity, and connection. The name comes from something personal, but it stuck because sparrows are known for being social, adaptable, and always buzzing with energy. That’s exactly how our team works with brands.'
     },
     {
-      question: 'Demo question',
-      answer: 'This is a placeholder answer for the demo question.'
+      question: 'How do you stand out from the rest?',
+      answer: 'We don’t try to shout the loudest, we sing the right tune. Every brand gets its own rhythm, we just help you play it louder and prouder.'
     }
   ])
   

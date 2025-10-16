@@ -1,5 +1,5 @@
 <template>
-    <div ref="root" class="w-full py-[80px] bg-[#EE3744]">
+    <div ref="root" class="w-full py-[80px] bg-[#ffb703]">
       <div class="max-w-[1190px] mx-auto">
         <div class="flex gap-[30px] justify-between">
           <!-- Media (left) -->

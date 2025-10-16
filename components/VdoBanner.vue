@@ -1,5 +1,5 @@
 <template>
-    <div class="relative bg-[#897bff] w-full border-red-500">
+    <div class="relative bg-[#457b9d] w-full border-red-500">
       <div class="max-w-[1390px] mx-auto overflow-hidden">
         <video
           class="w-full h-[70vh] object-cover rounded-[30px]"

@@ -1,6 +1,20 @@
 /* assets/css/global.css */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Vina+Sans&display=swap');
 /* Reset & base */
+@font-face {
+  font-family: "Boohong";
+  src: url("../fonts/Boohong.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/futura-book-bt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -14,13 +28,13 @@ body {
   img { max-width: 100%; height: auto; }
 
   h1,h2 {
-    font-family: "Vina Sans", sans-serif;
+    font-family: "Boohong", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
 
   h3,h4,h5,h6,p {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Futura", sans-serif;
   }
 
   

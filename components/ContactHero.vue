@@ -1,7 +1,7 @@
 <template>
     <section ref="contactHero" class="relative contact-hero w-full">
         <div class="contact-title">
-            <h1 class="text-center leading-1">Get in Touch</h1>
+            <h1 class="text-center mt-[40px] leading-[0.9] text-[clamp(40px,15vw,140px)]">Get in Touch</h1>
             <p class="pt-[30px]">Let's meet up</p>
         </div>
        
