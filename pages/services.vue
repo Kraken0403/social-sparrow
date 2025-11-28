@@ -1,7 +1,8 @@
 <template>
   <div>
     <ServicesHero />
-    <VdoBanner />
+    <!-- <VdoBanner /> -->
+    <ServicesCarousel />
     <ServicesRows />
     <Footer />
 
@@ -23,6 +24,7 @@ import Footer from '~/components/Footer.vue'
 import ServicesHero from '~/components/ServicesHero.vue'
 import VdoBanner from '~/components/VdoBanner.vue'
 import ServicesRows from '~/components/ServicesRows.vue'
+import ServicesCarousel from '~/components/ServicesCarousel.vue'
 
 const showScrollTop = ref(false)
 

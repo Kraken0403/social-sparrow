@@ -2,7 +2,7 @@
   <div>
     <AboutHero />
     <AboutContent />
-    <LogoMarquee />
+    <!-- <LogoMarquee /> -->
     <WWD />
     <Founder />
     <Footer />

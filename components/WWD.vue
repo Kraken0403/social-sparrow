@@ -20,7 +20,7 @@
       <!-- 1: Social Media Management (6 cols) -->
       <div class="card col-span-6 bg-[#457b9d] rounded-[20px] overflow-hidden relative py-[25px] px-[30px] cursor-pointer min-h-[280px]">
         <div class="card-overlay pointer-events-none absolute w-full h-full bg-[#1a1a1a] z-10 left-0 top-0 py-[25px] px-[30px] flex flex-col justify-between">
-          <h4 class="text-[28px] text-white font-bold">Social Media Management</h4>
+          <h4 class="text-[24px] leading-[1.2] text-white font-bold">Social Media Management</h4>
           <p class="text-[18px] text-white">
             We manage your brand’s social media from start to finish—strategy, posting, replying, and growing. Every platform is handled with a clear voice, consistent look, and a goal to build connection, not just numbers.
           </p>
@@ -34,7 +34,7 @@
       <!-- 2: Content Creation (3 cols) -->
       <div class="card col-span-3 bg-[#660066] rounded-[20px] overflow-hidden relative py-[25px] px-[30px] cursor-pointer min-h-[280px]">
         <div class="card-overlay pointer-events-none absolute w-full h-full bg-[#1a1a1a] z-10 left-0 top-0 py-[25px] px-[30px] flex flex-col justify-between">
-          <h4 class="text-[28px] text-white font-bold">Content Creation</h4>
+          <h4 class="text-[24px] leading-[1.2] text-white font-bold">Content Creation</h4>
           <p class="text-[18px] text-white">
             Photos, videos, reels, stories, and captions tailored to your brand’s personality—planned to keep your audience engaged and wanting more.
           </p>
@@ -48,7 +48,7 @@
       <!-- 3: Feed Designing (3 cols) -->
       <div class="card col-span-3 bg-[#faeabd] rounded-[20px] overflow-hidden relative py-[25px] px-[30px] cursor-pointer min-h-[280px]">
         <div class="card-overlay pointer-events-none absolute w-full h-full bg-[#1a1a1a] z-10 left-0 top-0 py-[25px] px-[30px] flex flex-col justify-between">
-          <h4 class="text-[28px] text-white font-bold">Feed Designing</h4>
+          <h4 class="text-[24px] leading-[1.2] text-white font-bold">Feed Designing</h4>
           <p class="text-[18px] text-white">
             We craft clean, aesthetic feeds aligned to your brand vibe—every post fits in, stands out, and tells a bigger story.
           </p>
@@ -62,7 +62,7 @@
       <!-- 4: Influencer Campaign (3 cols span 2 rows) -->
       <div class="card col-span-3 row-span-2 bg-[#aed9e0] rounded-[20px] overflow-hidden relative py-[25px] px-[30px] cursor-pointer">
         <div class="card-overlay pointer-events-none absolute w-full h-full bg-[#1a1a1a] z-10 left-0 top-0 py-[25px] px-[30px] flex flex-col justify-between">
-          <h4 class="text-[28px] text-white font-bold">Influencer Campaign</h4>
+          <h4 class="text-[24px] leading-[1.2] text-white font-bold">Influencer Campaign</h4>
           <p class="text-[18px] text-white">
             From micro to macro, we connect you with creators that fit your brand voice—briefing, coordination, and performance tracking included.
           </p>
@@ -76,7 +76,7 @@
       <!-- 5: Creative Campaign Designing (4 cols) -->
       <div class="card col-span-4 bg-[#f5e1d8] rounded-[20px] overflow-hidden relative py-[25px] px-[30px] cursor-pointer min-h-[200px]">
         <div class="card-overlay pointer-events-none absolute w-full h-full bg-[#1a1a1a] z-10 left-0 top-0 py-[25px] px-[30px] flex flex-col justify-between">
-          <h4 class="text-[28px] text-white font-bold">Creative Campaign Designing</h4>
+          <h4 class="text-[24px] leading-[1.2] text-white font-bold">Creative Campaign Designing</h4>
           <p class="text-[18px] text-white">
             Smart, memorable campaigns—from ideation to execution—built to highlight what makes your brand different.
           </p>
@@ -90,7 +90,7 @@
       <!-- 6: Media Consultation (5 cols) -->
       <div class="card col-span-5 bg-[#ffb703] rounded-[20px] overflow-hidden relative py-[25px] px-[30px] cursor-pointer min-h-[280px]">
         <div class="card-overlay pointer-events-none absolute w-full h-full bg-[#1a1a1a] z-10 left-0 top-0 py-[25px] px-[30px] flex flex-col justify-between">
-          <h4 class="text-[28px] text-white font-bold">Media Consultation</h4>
+          <h4 class="text-[24px] leading-[1.2] text-white font-bold">Media Consultation</h4>
           <p class="text-[18px] text-white">
             Online or offline? We help you choose the right mix—Instagram ads, radio, cinema, billboards—based on audience, goals, and budget.
           </p>
@@ -104,7 +104,7 @@
       <!-- 7: Creative Video Promotion (9 cols starting at col 4) -->
       <div class="card col-start-4 col-span-9 bg-[#d3e4cd] rounded-[20px] overflow-hidden relative py-[25px] px-[30px] cursor-pointer min-h-[280px]">
         <div class="card-overlay pointer-events-none absolute w-full h-full bg-[#1a1a1a] z-10 left-0 top-0 py-[25px] px-[30px] flex flex-col justify-between">
-          <h4 class="text-[28px] text-white font-bold">Creative Video Promotion</h4>
+          <h4 class="text-[28px] leading-[1.2] text-white font-bold">Creative Video Promotion</h4>
           <p class="text-[18px] text-white">
             Videos that entertain, inform, and sell—planned to keep viewers watching till the end without the hard‑sell feel.
           </p>
@@ -117,7 +117,7 @@
     </div>
 
     <div class="mx-auto text-center mt-[65px]">
-      <PressButton text="Know More" color="#EF1525" />
+      <PressButton link="/services" text="Know More" color="#EF1525" />
     </div>
   </section>
 </template>

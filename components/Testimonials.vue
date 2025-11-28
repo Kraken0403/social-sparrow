@@ -21,7 +21,7 @@
           <!-- headshot -->
           <div class="card-header flex items-center justify-between">
             <div class="headshot flex items-center gap-[15px]">
-              <img :src="test.photo" alt="" class="w-[48px] h-[48px] border-1 rounded-[100%] object-cover" />
+              <!-- <img :src="test.photo" alt="" class="w-[48px] h-[48px] border-1 rounded-[100%] object-cover" /> -->
               <div>
                 <h3 class="text-[22px] font-bold text-[#1a1a1a] text-left">{{ test.name }}</h3>
                 <p class="text-sm text-[#1a1a1a] text-left">{{ test.title }}</p>
@@ -168,7 +168,7 @@ const testimonials = [
     name: 'Michael Brown',
     title: 'Senior SEO Specialist',
     quote:
-      '5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization.',
+      'I honestly had no idea how to manage my social media. I used to post randomly and hope for the best. Social Sparrow took over and sorted everything, planning, posting, even captions. My page finally looks neat, regular, and honestly… stress-free.',
     photo: '/images/michael-brown.jpg',
     linkedin: '#',
     bg: 'bg-[#ffb703]',
@@ -177,7 +177,7 @@ const testimonials = [
     name: 'Emily Johnson',
     title: 'PPC Manager',
     quote:
-      '3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis.',
+      "What I really appreciate about Social Sparrow is their ideas. They don’t give the same trend-following stuff from the market. They come up with concepts I had never even thought of, and such strategies that actually work for my audience. My page finally feels different, in a good way.",
     photo: '/images/emily-johnson.jpg',
     linkedin: '#',
     bg: 'bg-[#457b9d]',
@@ -186,7 +186,7 @@ const testimonials = [
     name: 'Brian Williams',
     title: 'Social Media Specialist',
     quote:
-      '4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement.',
+      "I was genuinely scared to be on camera but my field demanded it. Even small videos felt impossible. But the Social Sparrow team was so patient, they guided me, hyped me up, and made it feel normal. It had been really easy for me since then, and it’s helping me retain the trust that that my clients have on me.",
     photo: '/images/brian-williams.jpg',
     linkedin: '#',
     bg: 'bg-[#ffb703]',
@@ -195,7 +195,7 @@ const testimonials = [
     name: 'Sarah Kim',
     title: 'Content Creator',
     quote:
-      '2+ years of experience in writing and editing. Skilled in creating compelling, SEO-optimized content for various industries.',
+     "Working with Social Sparrow has been super easy. They understand what I want even when I can’t explain it properly. Their initial consultation was so crisp! Their team is quick, clear, and honestly very supportive. It feels like they actually care about my brand, not just the work.",
     photo: '/images/sarah-kim.jpg',
     linkedin: '#',
     bg: 'bg-[#457b9d]',

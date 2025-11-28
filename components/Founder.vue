@@ -7,7 +7,7 @@
             <div ref="mediaRef" class="bg-round relative h-[100%] w-[100%] flex justify-between items-center">
               <div class="absolute z-[1] w-[300px] h-[300px] bg-[#ebff57] rounded-[50%]"></div>
               <!-- <div class="absolute  top-[50%] left-[50%]  w-[320px] h-[320px] bg-[#FFB800] rounded-[50%]"></div> -->
-              <img class="z-[5]" src="../assets/images/sample.png" alt="">
+              <img class="rounded-[20px] z-[5] w-[100%]" src="../assets/images/nishi.jpg" alt="">
             </div>
           </div>
   
@@ -23,10 +23,10 @@
             />
   
             <p class="js-para text-[22px] text-[#1a1a1a] pb-[30px]">
-              At Social Sparrow, we believe in the power of smart, meaningful connections. We are a passionate team of digital marketers, creative designers, and technology enthusiasts, driven by one mission — to help brands soar higher in the digital world.
+              If Social Sparrow had a human form, it would be Nishi Tekchandani, because who else can juggle madness and marketing with the same energy? She’s allergic to boring work, obsessed with good ideas, and somehow always right about what will look better. 
             </p>
             <p class="js-para text-[22px] text-[#1a1a1a]">
-              Founded with a vision to make digital marketing accessible, strategic, and result-oriented for businesses of all sizes, Social Sparrow offers end-to-end solutions that spark conversations, build communities, and drive growth. Whether you’re a startup finding your wings or an established brand aiming to scale new heights, we tailor our strategies to fit your unique goals.
+              She brings the kind of creative energy that makes everything fall perfectly into place. Working with her feels effortless, but the ideas & results? Always sharp, always intentional.
             </p>
           </div>
         </div>

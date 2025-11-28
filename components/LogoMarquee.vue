@@ -1,74 +1,74 @@
 <template>
     <section class="logo-marquee py-[80px]">
-      <h2 class="title">HAPPY CLIENTS</h2>
+      <h2 class="title">50+ HAPPY CLIENTS</h2>
   
-      <div class="logo-wrapper">
-        <!-- Top Row -->
+      <!-- <div class="logo-wrapper">
+
         <div ref="row1" class="logo-row">
           <div class="row-content">
             <img v-for="(logo, i) in logos" :key="'top-' + i" :src="logo" class="logo" />
           </div>
         </div>
-  
-        <!-- Bottom Row -->
+
+
         <div ref="row2" class="logo-row">
           <div class="row-content reverse">
             <img v-for="(logo, i) in logos" :key="'bottom-' + i" :src="logo" class="logo" />
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
   </template>
   
   <script setup>
-  import { ref, onMounted } from 'vue'
-  import gsap from 'gsap'
-  import ScrollTrigger from 'gsap/ScrollTrigger'
+  // import { ref, onMounted } from 'vue'
+  // import gsap from 'gsap'
+  // import ScrollTrigger from 'gsap/ScrollTrigger'
   
-  gsap.registerPlugin(ScrollTrigger)
+  // gsap.registerPlugin(ScrollTrigger)
   
-  const row1 = ref(null)
-  const row2 = ref(null)
+  // const row1 = ref(null)
+  // const row2 = ref(null)
   
-  const logos = [
-    'https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/4/47/React.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/a/a7/Font_Awesome_5_brands_google.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/0/0b/Microsoft_logo.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/9/96/Twitter_bird_logo_2012.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/c/c9/YouTube_play_button_icon_%282013-2017%29.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/e/e8/TikTok_logo.svg'
-  ]
+  // const logos = [
+  //   'https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg',
+  //   'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg',
+  //   'https://upload.wikimedia.org/wikipedia/commons/4/47/React.svg',
+  //   'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg',
+  //   'https://upload.wikimedia.org/wikipedia/commons/a/a7/Font_Awesome_5_brands_google.svg',
+  //   'https://upload.wikimedia.org/wikipedia/commons/0/0b/Microsoft_logo.svg',
+  //   'https://upload.wikimedia.org/wikipedia/commons/9/96/Twitter_bird_logo_2012.svg',
+  //   'https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg',
+  //   'https://upload.wikimedia.org/wikipedia/commons/c/c9/YouTube_play_button_icon_%282013-2017%29.svg',
+  //   'https://upload.wikimedia.org/wikipedia/commons/e/e8/TikTok_logo.svg'
+  // ]
   
-  onMounted(() => {
-    const row1Content = row1.value.querySelector('.row-content')
-    const row2Content = row2.value.querySelector('.row-content')
+  // onMounted(() => {
+  //   const row1Content = row1.value.querySelector('.row-content')
+  //   const row2Content = row2.value.querySelector('.row-content')
   
-    gsap.to(row1Content, {
-      xPercent: -15,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: row1.value,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: true
-      }
-    })
+  //   gsap.to(row1Content, {
+  //     xPercent: -15,
+  //     ease: 'none',
+  //     scrollTrigger: {
+  //       trigger: row1.value,
+  //       start: 'top bottom',
+  //       end: 'bottom top',
+  //       scrub: true
+  //     }
+  //   })
   
-    gsap.to(row2Content, {
-      xPercent: 15,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: row2.value,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: true
-      }
-    })
-  })
+  //   gsap.to(row2Content, {
+  //     xPercent: 15,
+  //     ease: 'none',
+  //     scrollTrigger: {
+  //       trigger: row2.value,
+  //       start: 'top bottom',
+  //       end: 'bottom top',
+  //       scrub: true
+  //     }
+  //   })
+  // })
   </script>
   
   <style scoped>

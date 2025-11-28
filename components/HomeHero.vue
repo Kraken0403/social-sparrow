@@ -5,39 +5,41 @@
       <AnimatedSplit
         ref="titleRef"
         tag="h1"
-        wrap-class="relative z-[2] mb-[80px] mt-[40px] leading-[0.9] text-[clamp(40px,15vw,140px)] font-bold uppercase text-[#023047]"
+        wrap-class="relative z-[2] mb-[80px] mt-[40px] leading-[0.9] text-[clamp(40px,12vw,120px)] font-bold uppercase sm:w-[150px] md:w-[100%] text-[#023047]"
         text="Your brand has a voice. We make sure it’s heard."
         :duration="1.0"
         :char-stagger="0.028"
       />
 
-      <PressButton text="Know More" color="#EF1525" />
+      <PressButton link="/about" text="Know More" color="#EF1525" />
     </div>
 
-    <div class="relative py-[30px] w-full bg-[#ffdd46] min-h-[100vh] rounded-t-[50%] pb-[130px]">
+    <div class="relative py-[30px] w-full bg-[#ffdd46] min-h-[100vh] pb-[130px] yellow-section">
+
       <div class="text-center">
         <!-- <h2 class="text-[120px] mb-[40px] text-[#FF9900] leading-[0.9] uppercase ">Seize The Day</h2> -->
         <AnimatedSplit
           ref="seizeRef"
           tag="h2"
-          wrap-class="mb-[40px] leading-[0.9] text-[clamp(36px,10vw,62px)] font-bold uppercase text-[#023047]"
+          wrap-class="mb-[40px] mx-auto leading-[0.9] text-[clamp(36px,8vw,54px)] font-bold uppercase text-[#023047] w-[70%]"
           text="we don’t just manage brands, we give them wings. 🪶"
           :duration="0.9"
           :char-stagger="0.02"
         />
 
-        <h2 class="text-center max-w-[700px] mx-auto text-[#2e5369] text-[26px] leading-[1]">
+        <p class="text-center max-w-[700px] mx-auto text-[#2e5369] text-[26px] leading-[1] font-bold">
           Think of us as your creative partner who dreams with you, plans for you, and executes like magic. From scroll-stopping content to out of the box designs, campaigns & experiences, we make sure your brand doesn’t just show up, it shows off.
-        </h2>
+        </p>
       </div>
 
       <div class="relative text-center mt-[60px]">
 
         <!-- Left small circle (parallax) -->
-        <div class="circle-img parallax-circle absolute left-[10%] top-[15%]" data-speed="2.15">
-          <div class="w-[170px] h-[170px] flex items-center justify-center border-[20px] border-white rounded-[50%] bg-transparent">
-            <div class="w-[140px] h-[140px] flex items-center justify-center rounded-[50%] bg-[#ff0000] relative">
-              <img class="rounded-[50%] w-full h-full object-cover" src="../assets/images/sample.png" alt="">
+        <div class="circle-img parallax-circle absolute left-[10%] top-[15%] hidden md:block" data-speed="2.15" >
+          <div class="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[170px] md:h-[170px]
+           flex items-center justify-center border-[20px] border-white rounded-[50%] bg-transparent">
+            <div class="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[140px] md:h-[140px] flex items-center justify-center rounded-[50%] bg-[#ff0000] relative">
+              <img class="rounded-[50%] w-full h-full object-cover" src="../assets/images/nishi-2.jpg" alt="">
               <div class="stats-div flex gap-[10px] justify-between top-[80%] left-[20%] transform -translate-y-1/2 absolute w-auto text-left h-auto p-[10px] rounded-[12px] bg-white z-[100]">
                 <ClientOnly>
                   <lord-icon
@@ -59,7 +61,8 @@
         </div>
 
          <!-- Center concentric circles (with custom classes for selection) -->
-         <div class="concentric rounded-[50%] flex items-center justify-center w-[700px] h-[700px] bg-[#ffb70062] mx-auto relative">
+         <div class="concentric rounded-[50%] flex items-center justify-center w-[260px] h-[260px] sm:w-[360px] sm:h-[360px] md:w-[520px] md:h-[520px] lg:w-[700px] lg:h-[700px]
+ bg-[#ffb70062] mx-auto relative">
           <div class="stats-div flex gap-[10px] justify-between top-[75%] right-[0%] transform -translate-y-1/2 absolute w-auto text-left h-auto p-[10px] rounded-[12px] bg-white z-[100]">
             <ClientOnly>
               <lord-icon
@@ -78,19 +81,21 @@
           </div>
 
           <!-- mid circle -->
-          <div class="concentric__mid rounded-[50%] flex items-center justify-center overflow-hidden w-[600px] h-[600px] bg-[#ef1524]/35 mx-auto">
+          <div class="concentric__mid rounded-[50%] flex items-center justify-center overflow-hidden w-[220px] h-[220px] sm:w-[320px] sm:h-[320px] md:w-[450px] md:h-[450px] lg:w-[600px] lg:h-[600px]
+ bg-[#ef1524]/35 mx-auto">
             <!-- inner circle -->
-            <div class="concentric__inner rounded-[50%] relative overflow-hidden w-[500px] h-[500px] bg-[#00B6FF] mx-auto">
-              <img class="concentric__img w-full h-full object-cover" src="../assets/images/sample.png" alt="">
+            <div class="concentric__inner rounded-[50%] relative overflow-hidden w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] md:w-[360px] md:h-[360px] lg:w-[500px] lg:h-[500px]
+ bg-[#00B6FF] mx-auto">
+              <img class="concentric__img w-full h-full object-cover" src="../assets/images/nishi.jpg" alt="">
             </div>
           </div>
         </div>
 
         <!-- Right small circle (parallax) -->
-        <div class="circle-img parallax-circle absolute left-[80%] top-[55%]" data-speed="1.5">
-          <div class="w-[120px] h-[120px] flex items-center justify-center border-[20px] border-white rounded-[50%] bg-transparent">
-            <div class="w-[90px] h-[90px] flex items-center justify-center rounded-[50%] bg-[#ff0000] relative">
-              <img class="rounded-[50%] w-full h-full object-cover" src="../assets/images/sample.png" alt="">
+        <div class="circle-img parallax-circle absolute left-[80%] top-[55%] hidden md:block" data-speed="1.5">
+          <div class="w-[90px] h-[90px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] flex items-center justify-center border-[20px] border-white rounded-[50%] bg-transparent">
+            <div class="w-[70px] h-[70px] sm:w-[85px] sm:h-[85px] md:w-[90px] md:h-[90px] flex items-center justify-center rounded-[50%] bg-[#ff0000] relative">
+              <img class="rounded-[50%] w-full h-full object-cover" src="../assets/images/nishi-3.jpg" alt="">
               <div class="stats-div flex gap-[10px] justify-between top-[80%] left-[20%] transform -translate-y-1/2 absolute w-auto text-left h-auto p-[10px] rounded-[12px] bg-white z-[100]">
                 <ClientOnly>
                   <lord-icon
@@ -327,4 +332,17 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .parallax-circle { will-change: transform; }
+
+.yellow-section {
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
+}
+
+@media (min-width: 768px) {
+  .yellow-section {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+  }
+}
+
 </style>

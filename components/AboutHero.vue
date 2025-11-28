@@ -15,7 +15,7 @@
       <!-- Animated subtitle -->
       <AnimatedSplit
         ref="subtitleRef"
-        :text="'Help us lose our minds with your ideas'"
+        :text="'We turn casual thoughts into full-blown strategies.'"
         tag="p"
         class="subtitle-split"
         :duration="0.7"

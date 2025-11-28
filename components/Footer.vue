@@ -1,7 +1,7 @@
 <template>
   <div class="banner bg-[#1a1a1a] py-[80px] text-center h-[70vh] flex-col items-center justify-center">
-    <h1 class="text-center text-white text-[82px] uppercase leading-[120px] mb-[30px]">Come Talk <br/>to us</h1>
-    <PressButton text="Contact Us" color="#EF1525" bgColor="#ffffff"/>
+    <h1 class="text-center text-white text-[82px] uppercase leading-[1.2] mb-[30px]">Come Talk<br/> to us</h1>
+    <PressButton link="/contact" text="Contact Us" color="#EF1525" bgColor="#ffffff"/>
   </div>
     <footer class="bg-[#1a1a1a] text-white text-sm py-8 px-6 md:px-12 border-t-[1px] border-[#ffffff45]">
       <div class="flex flex-row gap-8 items-end md:justify-between">

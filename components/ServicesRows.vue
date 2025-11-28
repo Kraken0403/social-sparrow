@@ -22,7 +22,7 @@
             <p class="text-[#1a1a1a] text-[22px]">
               {{ s.desc }}
             </p>
-            <PressButton class="mt-[30px]" text="Contact Us" color="#5644ff" />
+            <PressButton link="/contact" class="mt-[30px]" text="Contact Us" color="#5644ff" />
           </div>
         </div>
       </div>
