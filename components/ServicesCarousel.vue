@@ -24,16 +24,16 @@
   <script setup>
   import { ref, onMounted } from "vue";
   import gsap from "gsap";
-  import one from '~/assets/images/1s.jpg'
-  import two from '~/assets/images/2s.png'
-  import three from '~/assets/images/3s.png'
-  import four from '~/assets/images/4s.jpg'
-  import five  from '~/assets/images/5s.png'
-  import six from '~/assets/images/6s.png'
-  import seven from '~/assets/images/7s.png'
+  import one from '~/assets/images/1s.JPG'
+  import two from '~/assets/images/2s.PNG'
+  import three from '~/assets/images/3s.PNG'
+  import four from '~/assets/images/4s.JPG'
+  import five  from '~/assets/images/5s.PNG'
+  import six from '~/assets/images/6s.PNG'
+  import seven from '~/assets/images/7s.PNG'
 //   import eight from '~/assets/images/8s.png'
-  import nine from '~/assets/images/9s.jpeg'
-  import ten from '~/assets/images/10s.png'
+  import nine from '~/assets/images/9s.JPEG'
+  import ten from '~/assets/images/10s.PNG'
   const images = [
     one,
     two,
