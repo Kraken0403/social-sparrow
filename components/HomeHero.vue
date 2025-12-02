@@ -1,6 +1,6 @@
 <template>
   <section ref="heroRoot" class="relative w-full min-h-[100vh] bg-[#ffb703] ">
-    <div class="flex flex-col md:py-[130px] py-[60px] items-center max-w-[1190px] text-center mx-auto overflow-hidden">
+    <div class="flex flex-col md:py-[130px] py-[60px] justify-center items-center max-w-[1190px] min-h-[70vh] md:justify-normal text-center mx-auto overflow-hidden">
       <!-- Title -->
       <AnimatedSplit
         ref="titleRef"
