@@ -29,8 +29,10 @@
 </template>
 
 <script setup>
+import { useEventBus } from '@vueuse/core'
 import { ref, nextTick, onMounted, onUnmounted } from 'vue'
 import { useNuxtApp } from '#app'
+
 import Preloader from '~/components/Preloader.vue'
 import HomeHero from '~/components/HomeHero.vue'
 import WWD from '~/components/WWD.vue'
@@ -38,18 +40,35 @@ import Testimonials from '~/components/Testimonials.vue'
 import FAQ from '~/components/FAQ.vue'
 import Footer from '~/components/Footer.vue'
 
+/* --------------------------------------------------
+   STATE
+-------------------------------------------------- */
 const showPreloader = ref(true)
 const showScrollTop = ref(false)
 const { $restoreScrollNow } = useNuxtApp()
 
+/* --------------------------------------------------
+   EVENT BUS (HomeHero listens to this)
+-------------------------------------------------- */
+const preloaderDoneBus = useEventBus('preloaderDone')
+
+/* --------------------------------------------------
+   PRELOADER DONE — emit event here
+-------------------------------------------------- */
 async function handlePreloaderDone() {
   await nextTick()
+
   requestAnimationFrame(() => {
-    $restoreScrollNow?.() // jump instantly & refresh ScrollTrigger
+    $restoreScrollNow?.() // restore scroll + refresh scrolltrigger
     showPreloader.value = false
+
+    preloaderDoneBus.emit()  // 🔥 HomeHero will now start counters
   })
 }
 
+/* --------------------------------------------------
+   SCROLL TO TOP BUTTON
+-------------------------------------------------- */
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }

@@ -1,14 +1,20 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
   ],
-  // Ensure your global CSS includes the Tailwind entry
+
   css: [
-    '~/assets/css/tailwind.css',
-    '~/assets/css/global.css', 
+    '@/assets/css/tailwind.css',
+    '@/assets/css/global.css'
   ],
 
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+
   compatibilityDate: '2025-05-15',
-  devtools: { enabled: true }
+  devtools: { enabled: true },
 })

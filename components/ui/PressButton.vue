@@ -31,10 +31,11 @@
   </script>
   
   <style scoped>
-  .press-btn {
+ .press-btn {
     display: inline-block;
-    padding: 12px 40px;
-    font-size: 1rem;
+    /* Mobile first: smaller padding and font size */
+    padding: 10px 20px;
+    font-size: 14px;
     font-weight: 600;
     color: #fff;
     background-color: var(--bg-color);
@@ -44,18 +45,27 @@
     transition: transform 0.1s ease, box-shadow 0.1s ease;
     text-align: center;
     text-decoration: none;
-  }
+    
+    /* For tablets and desktops */
+    @media (min-width: 768px) {
+        padding: 12px 40px;
+        font-size: 1rem;
+    }
+}
 
-  span {
+span {
     color: var(--btn-color);
-  }
-  .press-btn:hover {
+}
+
+.press-btn:hover {
     transform: translateY(6px);
     box-shadow: 0 0px 0 var(--btn-color);
-  }
-  .press-btn:active {
+}
+
+.press-btn:active {
     transform: translateY(6px);
     box-shadow: 0 0 0 var(--btn-color);
-  }
+}
+
   </style>
   

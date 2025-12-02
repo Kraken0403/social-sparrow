@@ -1,33 +1,54 @@
 <template>
-    <div class="w-full py-[80px] bg-[#457b9d]">
-      <div class="max-w-[992px] mx-auto">
-        <!-- Section heading -->
-        <div class="pb-[80px] border-b-1 border-[#1a1a1a]">
-          <h2 class="uppercase text-[62px] leading-[0.9] text-[#1a1a1a]">CHECK EM OUT!!!</h2>
-        </div>
-  
-        <!-- Service rows -->
-        <div
-          v-for="(s, i) in services"
-          :key="s.title"
-          class="flex py-[80px] px-[30px] gap-[30px] justify-between"
-          :class="i === services.length - 1 ? 'border-b-0' : 'border-b-1 border-[#1a1a1a]'"
-        >
-          <div class="w-[50%]">
-            <h2 class="text-[32px] text-[#1a1a1a] uppercase">
-              {{ number(i + 1) }}. {{ s.title }}
-            </h2>
-          </div>
-          <div class="w-[50%]">
-            <p class="text-[#1a1a1a] text-[22px]">
-              {{ s.desc }}
-            </p>
-            <PressButton link="/contact" class="mt-[30px]" text="Contact Us" color="#5644ff" />
-          </div>
-        </div>
+  <div class="w-full py-[80px] bg-[#457b9d]">
+    <div class="max-w-[992px] mx-auto px-4">
+      
+      <!-- Section heading -->
+      <div class="pb-[40px] md:pb-[80px] border-b border-[#1a1a1a]">
+        <h2 class="uppercase text-[42px] md:text-[62px] leading-[0.9] text-[#1a1a1a]">
+          CHECK EM OUT!!!
+        </h2>
       </div>
+
+      <!-- Service rows -->
+      <div
+        v-for="(s, i) in services"
+        :key="s.title"
+        class="
+          flex flex-col md:flex-row 
+          py-[50px] md:py-[80px] 
+          px-[10px] md:px-[30px] 
+          gap-[30px] justify-between
+        "
+        :class="i === services.length - 1 ? '' : 'border-b border-[#1a1a1a]'"
+      >
+        
+        <!-- LEFT COLUMN -->
+        <div class="w-full md:w-[50%]">
+          <h2 class="text-[26px] md:text-[32px] text-[#1a1a1a] uppercase">
+            {{ number(i + 1) }}. {{ s.title }}
+          </h2>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="w-full md:w-[50%]">
+          <p class="text-[#1a1a1a] text-[18px] md:text-[22px] leading-[1.3]">
+            {{ s.desc }}
+          </p>
+
+          <PressButton 
+            link="/contact" 
+            class="mt-[20px] md:mt-[30px]" 
+            text="Contact Us" 
+            color="#5644ff" 
+          />
+        </div>
+
+      </div>
+
     </div>
-  </template>
+  </div>
+</template>
+
   
   <script setup>
   import PressButton from '@/components/ui/PressButton.vue'

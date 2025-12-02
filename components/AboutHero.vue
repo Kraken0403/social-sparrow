@@ -1,26 +1,33 @@
 <template>
-  <section ref="aboutHero" class="about-hero" @mousemove="handleMouseMove">
+  <section
+    ref="aboutHero"
+    class="relative h-[60vh] md:h-screen bg-[#d3e4cd] overflow-hidden"
+    @mousemove="handleMouseMove"
+  >
     <!-- Title -->
-    <div class="about-title">
+    <div
+      class="absolute top-1/2 left-1/2 w-[90%] -translate-x-1/2 -translate-y-[52%] pointer-events-none z-[1] text-center leading-[1.12]"
+    >
       <!-- Animated title -->
       <AnimatedSplit
         ref="titleRef"
         :text="'ABOUT US'"
         tag="h1"
-        class="relative z-[2] leading-[0.9] text-[clamp(40px,15vw,140px)] font-bold"
+        class="relative z-[2] leading-[0.9] text-[clamp(40px,11vw,120px)] font-bold text-[#1a1a1a]"
         :duration="0.9"
         :char-stagger="0.028"
-        :autoplay="false"  
+        :autoplay="false"
       />
+
       <!-- Animated subtitle -->
       <AnimatedSplit
         ref="subtitleRef"
         :text="'We turn casual thoughts into full-blown strategies.'"
         tag="p"
-        class="subtitle-split"
+        class="mt-[8px] text-[clamp(16px,2vw,22px)] text-[#1a1a1a]"
         :duration="0.7"
         :char-stagger="0.02"
-        :autoplay="false"   
+        :autoplay="false"
       />
     </div>
 
@@ -224,7 +231,7 @@ onBeforeUnmount(() => {
 
 /* AnimatedSplit title/subtitle sizes/colors */
 .title-split {
-  font-size: clamp(80px, 14vw, 220px);
+  /* font-size: clamp(80px, 14vw, 220px); */
   font-weight: 800;
   color: #1a1a1a;
 }

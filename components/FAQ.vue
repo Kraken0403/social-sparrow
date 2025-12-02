@@ -1,9 +1,9 @@
 <template>
-    <div class=" relative w-full bg-white py-[80px]" >
-        <div class="border-[1px] border-[#000] max-w-[1190px] p-[30px] mx-auto flex flex-row lg:flex-row w-full h-auto bg-white rounded-[16px] overflow-hidden">
+    <div class=" relative w-full bg-white md:py-[80px] py-[60px]" >
+        <div class="border-[1px] border-[#000] md:max-w-[1190px] max-w-[90%] p-[30px] mx-auto flex flex-col md:flex-row w-full h-auto bg-white rounded-[16px] overflow-hidden">
             <!-- Sidebar -->
-            <div class="w-full lg:w-[35%] p-6 bg-white">
-                <h2 class="text-[62px] lg:text-[62px] font-black mb-8 leading-none">FAQs.</h2>
+            <div class="w-[100%] md:w-[45%] md:p-6 p-2 bg-white">
+                <h2 class=" text-[clamp(36px,8vw,62px)] font-black mb-8 leading-none">FAQs.</h2>
         
                 <div class="space-y-4">
                 <button
@@ -22,7 +22,7 @@
             </div>
   
             <!-- Answer Panel -->
-            <div class=" rounded-[16px] w-full lg:w-[65%] p-8 lg:p-12 bg-[#ffc800] flex justify-center">
+            <div class=" rounded-[16px]w-[100%] md:w-[55%] p-8 lg:p-12 bg-[#ffc800] flex justify-center">
                 <p class="text-lg lg:text-xl leading-relaxed max-w-2xl text-black">
                 {{ faqs[activeIndex].answer }}
                 </p>

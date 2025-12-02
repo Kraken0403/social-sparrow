@@ -44,7 +44,7 @@
       <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-[1]">
         <div
           ref="greetText"
-          class="inline-block px-4 py-2 text-white/95 text-[clamp(24px,6vw,64px)] font-semibold leading-tight tracking-tight text-center"
+          class="inline-block px-4 py-2 text-white/95 text-[clamp(36px,6vw,82px)] font-semibold leading-tight tracking-tight text-center"
           style="will-change: transform, opacity"
         >
           {{ currentGreeting }}

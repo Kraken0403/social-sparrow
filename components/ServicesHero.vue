@@ -1,22 +1,48 @@
 <template>
-  <section ref="servicesHero" class="relative services-hero w-full">
-    <div class="services-title">
+  <section
+    ref="servicesHero"
+    class="
+      relative w-full overflow-hidden
+      h-[60vh] md:h-[75vh] lg:h-[100vh]
+      bg-[#457b9d]
+    "
+  >
+    <!-- Centered Title Block -->
+    <div
+      class="
+        absolute top-1/2 left-1/2 
+        -translate-x-1/2 -translate-y-1/2 
+        pointer-events-none z-[1] 
+        text-center w-[90%]
+      "
+    >
       <!-- Animated Title -->
       <AnimatedSplit
         ref="titleRef"
         :text="'Our Services'"
         tag="h1"
-        class="leading-[0.9] text-[#023047] text-[clamp(40px,15vw,140px)]"
+        class="
+          leading-[0.9] 
+          uppercase
+          text-[clamp(40px,15vw,140px)]
+          font-extrabold 
+          text-[#1a1a1a]
+        "
         :duration="0.9"
         :char-stagger="0.028"
         :autoplay="false"
       />
+
       <!-- Animated Subtitle -->
       <AnimatedSplit
         ref="subtitleRef"
         :text="'Check us out and what we do'"
         tag="p"
-        class="subtitle-split"
+        class="
+          pt-[20px] 
+          text-[clamp(16px,2vw,22px)] 
+          text-[#1a1a1a]
+        "
         :duration="0.7"
         :char-stagger="0.02"
         :autoplay="false"
@@ -33,11 +59,10 @@ const servicesHero = ref(null)
 const titleRef = ref(null)
 const subtitleRef = ref(null)
 
-/* Single source of truth for starting the splits */
 let lastRunAt = 0
 function runSplits() {
   const now = performance.now()
-  if (now - lastRunAt < 250) return // debounce duplicate fires
+  if (now - lastRunAt < 250) return
   lastRunAt = now
 
   nextTick(() => {
@@ -51,7 +76,6 @@ function runSplits() {
 }
 
 function onPageEnter() {
-  // called after overlay reveal + also once on first paint from layout
   runSplits()
 }
 
@@ -64,35 +88,4 @@ onBeforeUnmount(() => {
 })
 </script>
 
-<style scoped>
-.services-hero {
-  position: relative;
-  height: 85vh;
-  background: #457b9d; /* tweak as needed */
-  overflow: hidden;
-}
-
-.services-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 1;
-  text-align: center;
-}
-
-/* Sizes/weights for AnimatedSplit nodes */
-.title-split {
-  font-size: clamp(56px, 12vw, 220px);
-  line-height: 0.9;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: #1a1a1a;
-}
-.subtitle-split {
-  padding-top: 30px;
-  font-size: clamp(16px, 2vw, 22px);
-  color: #1a1a1a;
-}
-</style>
+<!-- No style tag needed -->

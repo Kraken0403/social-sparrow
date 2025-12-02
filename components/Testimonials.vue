@@ -1,48 +1,27 @@
 <template>
-  <section ref="rootRef" class="relative w-full bg-[#aed9e0] py-[80px]">
-    <div class="text-center max-w-[1190px] mx-auto">
+  <section ref="rootRef" class="relative w-full bg-[#aed9e0] md:py-[130px] py-[60px]">
+    <div class="text-center md:max-w-[1190px] max-w-[90%] mx-auto">
       <!-- Title animates like WWD via AnimatedSplit -->
       <AnimatedSplit
         ref="titleRef"
         tag="h2"
-        wrap-class="uppercase text-[62px] text-[#1a1a1a] leading-[1]"
+        wrap-class="uppercase  text-[clamp(36px,8vw,62px)]  text-[#1a1a1a] leading-[1]"
         text="Testimonials"
         :duration="0.9"
         :char-stagger="0.02"
       />
 
-      <div class="mt-[65px] t-grid grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-[40px] px-0">
+      <div class="mt-[65px] t-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[40px] px-0">
         <div
           v-for="test in testimonials"
           :key="test.name"
-          class="t-card relative border-[1px] border-[#1a1a1a] rounded-[45px] overflow-hidden py-[60px] px-[60px] shadow-[0_8px_0_0_rgba(0,0,0,0.8)]"
+          class="t-card relative border-[1px] border-[#1a1a1a] rounded-[45px] overflow-hidden py-[40px] px-[40px] md:py-[60px] md:px-[60px] shadow-[0_8px_0_0_rgba(0,0,0,0.8)]"
           :class="test.bg"
         >
-          <!-- headshot -->
-          <div class="card-header flex items-center justify-between">
-            <div class="headshot flex items-center gap-[15px]">
-              <!-- <img :src="test.photo" alt="" class="w-[48px] h-[48px] border-1 rounded-[100%] object-cover" /> -->
-              <div>
-                <h3 class="text-[22px] font-bold text-[#1a1a1a] text-left">{{ test.name }}</h3>
-                <p class="text-sm text-[#1a1a1a] text-left">{{ test.title }}</p>
-              </div>
-            </div>
-
-            <!-- LinkedIn icon -->
-            <a :href="test.linkedin" target="_blank" class="">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-black" viewBox="0 0 24 24">
-                <path
-                  d="M4.98 3.5a2.5 2.5 0 115 0 2.5 2.5 0 01-5 0zm.02 4.5H2v14h6v-14H5zm7.5 0h-2v14h6v-7c0-3-4-2.75-4 0v7h2v-7c0-1.5 2-1.5 2 0v7h2v-7c0-3-4-2.75-4 0v7h2V8z"
-                />
-              </svg>
-            </a>
-          </div>
-
-          <!-- divider -->
-          <hr class="my-[30px] border-t border-[#1a1a1a]" />
 
           <!-- quote -->
-          <p class="text-[16px] text-left text-[#1a1a1a]">{{ test.quote }}</p>
+          <span class="quote">"</span>
+          <p class="text-[18px] text-left text-[#1a1a1a]">{{ test.quote }}</p>
         </div>
       </div>
     </div>
@@ -205,4 +184,8 @@ const testimonials = [
 
 <style scoped>
 /* layout via Tailwind */
+.quote {
+  font-size: 92px;
+  line-height: 0.9;
+}
 </style>

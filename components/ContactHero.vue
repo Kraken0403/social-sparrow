@@ -1,45 +1,37 @@
 <template>
-    <section ref="contactHero" class="relative contact-hero w-full">
-        <div class="contact-title">
-            <h1 class="text-center mt-[40px] leading-[0.9] text-[clamp(40px,15vw,140px)]">Get in Touch</h1>
-            <p class="pt-[30px]">Let's meet up</p>
-        </div>
-       
+    <section
+      ref="contactHero"
+      class="relative h-[60vh] md:h-[85vh] w-full bg-white overflow-hidden"
+    >
+      <!-- Title Wrapper -->
+      <div
+        class="absolute top-1/2 left-1/2 w-[90%] 
+               -translate-x-1/2 -translate-y-1/2
+               pointer-events-none z-[1] text-center"
+      >
+        <h1
+          class="leading-[0.9] text-[#1a1a1a] font-bold uppercase
+                 text-[clamp(40px,14vw,140px)]"
+        >
+          Get in<br/> Touch
+        </h1>
+  
+        <p
+          class="pt-[20px] md:pt-[30px] 
+                 text-[clamp(16px,3.5vw,22px)] 
+                 text-[#1a1a1a]"
+        >
+          Let's meet up
+        </p>
+      </div>
     </section>
-</template>
-
-<style scoped>
-.contact-hero {
-    position: relative;
-    height: 85vh;
-    background: #fff;
-    /* background: #A3FF12; */
-    /* background: #FF7300; */
-    /* background:  #4E008E ; */
-    overflow: hidden;
-
-}
-.contact-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 220px;
-    font-weight: bold;
-    color: #1a1a1a;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.contact-title h1 {
-    line-height: 0.9;
-    text-transform: uppercase;
-}
-
-.contact-title p {
-    padding-top: 30px;
-    font-size: 22px;
-    text-align: center;
-}
-
-</style>
+  </template>
+  
+  <script setup>
+  // No JS needed here unless animations are added later
+  </script>
+  
+  <style scoped>
+  /* No additional styles needed */
+  </style>
+  

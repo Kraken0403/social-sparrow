@@ -1,116 +1,188 @@
 <template>
-  <section ref="wwdRoot" class="relative py-[80px] bg-[#f3efe6]">
+  <section ref="wwdRoot" class="relative py-[60px] md:py-[130px] bg-[#f3efe6]">
     <!-- Heading -->
     <div class="max-w-[1390px] mx-auto px-4 text-center mb-[65px]">
       <AnimatedSplit
         ref="titleRef"
         tag="h2"
-        wrap-class="uppercase text-[62px] text-[#1a1a1a] leading-none"
+        wrap-class="uppercase text-[clamp(36px,8vw,62px)] text-[#1a1a1a] leading-none"
         text="What We Do"
         :duration="0.9"
         :char-stagger="0.02"
       />
-      <p class="mt-[20px] text-[18px] text-[#1a1a1a]">
+      <p class="md:mt-[20px] mt-[10px] text-[16px] md:text-[18px] text-[#1a1a1a]">
         Why we make your brand unforgettable?
       </p>
     </div>
 
-    <!-- 12-col × 3-row grid -->
-    <div class="gridRoot max-w-[1190px] mx-auto px-4 grid grid-cols-12 grid-rows-3 gap-4">
-      <!-- 1: Social Media Management (6 cols) -->
-      <div class="card col-span-6 bg-[#457b9d] rounded-[20px] overflow-hidden relative py-[25px] px-[30px] cursor-pointer min-h-[280px]">
+    <!-- GRID -->
+    <!-- Mobile: 1 col / Tablet: 2–3 col / Desktop: restore your puzzle -->
+    <div
+      class="gridRoot max-w-[1190px] mx-auto px-4 
+             grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
+             lg:grid-cols-12 lg:grid-rows-3 gap-4">
+
+      <!-- 1: Social Media Management -->
+      <div
+        class="card 
+               bg-[#457b9d] rounded-[20px] overflow-hidden relative py-[25px] px-[30px]
+               cursor-pointer min-h-[280px]
+               lg:col-span-6">
         <div class="card-overlay pointer-events-none absolute w-full h-full bg-[#1a1a1a] z-10 left-0 top-0 py-[25px] px-[30px] flex flex-col justify-between">
-          <h4 class="text-[24px] leading-[1.2] text-white font-bold">Social Media Management</h4>
-          <p class="text-[18px] text-white">
+          <h4 class="text-[22px] md:text-[24px] leading-[1.2] text-white font-bold">Social Media Management</h4>
+          <p class="text-[16px] md:text-[18px] text-white">
             We manage your brand’s social media from start to finish—strategy, posting, replying, and growing. Every platform is handled with a clear voice, consistent look, and a goal to build connection, not just numbers.
           </p>
         </div>
-        <h2 class="text-[28px] text-[#1c2b42] uppercase leading-[1]">Social Media Management</h2>
-        <p class="absolute right-0 top-[70%] -translate-y-1/2 rotate-90 origin-center text-[14px] font-bold text-[#1a1a1a] uppercase">
+        <h2 class="text-[24px] md:text-[28px] text-[#1c2b42] uppercase leading-[1]">
+          Social Media Management
+        </h2>
+
+        <p
+          class="absolute right-[10%]  top-[70%] -translate-y-1/2 
+                 text-[12px] md:text-[14px] font-bold text-[#1a1a1a] uppercase 
+                 rotate-0 md:rotate-90 origin-center">
           151 Projects
         </p>
       </div>
 
-      <!-- 2: Content Creation (3 cols) -->
-      <div class="card col-span-3 bg-[#660066] rounded-[20px] overflow-hidden relative py-[25px] px-[30px] cursor-pointer min-h-[280px]">
+      <!-- 2: Content Creation -->
+      <div
+        class="card 
+               bg-[#660066] rounded-[20px] overflow-hidden relative py-[25px] px-[30px]
+               cursor-pointer min-h-[280px]
+               lg:col-span-3">
         <div class="card-overlay pointer-events-none absolute w-full h-full bg-[#1a1a1a] z-10 left-0 top-0 py-[25px] px-[30px] flex flex-col justify-between">
-          <h4 class="text-[24px] leading-[1.2] text-white font-bold">Content Creation</h4>
-          <p class="text-[18px] text-white">
+          <h4 class="text-[22px] md:text-[24px] leading-[1.2] text-white font-bold">Content Creation</h4>
+          <p class="text-[16px] md:text-[18px] text-white">
             Photos, videos, reels, stories, and captions tailored to your brand’s personality—planned to keep your audience engaged and wanting more.
           </p>
         </div>
-        <h2 class="text-[28px] text-[#1c2b42] uppercase leading-[1]">Content Creation</h2>
-        <p class="absolute right-0 top-[70%] -translate-y-1/2 rotate-90 origin-center text-[14px] font-bold text-[#1a1a1a] uppercase">
+        <h2 class="text-[24px] md:text-[28px] text-[#1c2b42] uppercase leading-[1]">Content Creation</h2>
+
+        <p
+          class="absolute right-[10%]  top-[70%] -translate-y-1/2 
+                 text-[12px] md:text-[14px] font-bold text-[#1a1a1a] uppercase 
+                 rotate-0 md:rotate-90 origin-center">
           82 Clients
         </p>
       </div>
 
-      <!-- 3: Feed Designing (3 cols) -->
-      <div class="card col-span-3 bg-[#faeabd] rounded-[20px] overflow-hidden relative py-[25px] px-[30px] cursor-pointer min-h-[280px]">
+      <!-- 3: Feed Designing -->
+      <div
+        class="card 
+               bg-[#faeabd] rounded-[20px] overflow-hidden relative py-[25px] px-[30px]
+               cursor-pointer min-h-[280px]
+               lg:col-span-3">
         <div class="card-overlay pointer-events-none absolute w-full h-full bg-[#1a1a1a] z-10 left-0 top-0 py-[25px] px-[30px] flex flex-col justify-between">
-          <h4 class="text-[24px] leading-[1.2] text-white font-bold">Feed Designing</h4>
-          <p class="text-[18px] text-white">
+          <h4 class="text-[22px] md:text-[24px] leading-[1.2] text-white font-bold">Feed Designing</h4>
+          <p class="text-[16px] md:text-[18px] text-white">
             We craft clean, aesthetic feeds aligned to your brand vibe—every post fits in, stands out, and tells a bigger story.
           </p>
         </div>
-        <h2 class="text-[28px] text-[#1c2b42] uppercase leading-[1]">Feed Designing</h2>
-        <p class="absolute right-0 top-[70%] -translate-y-1/2 rotate-90 origin-center text-[14px] font-bold text-[#1a1a1a] uppercase">
+        <h2 class="text-[24px] md:text-[28px] text-[#1c2b42] uppercase leading-[1]">Feed Designing</h2>
+
+        <p
+          class="absolute right-[10%]  top-[70%] -translate-y-1/2 
+                 text-[12px] md:text-[14px] font-bold text-[#1a1a1a] uppercase 
+                 rotate-0 md:rotate-90 origin-center">
           47 Clients
         </p>
       </div>
 
-      <!-- 4: Influencer Campaign (3 cols span 2 rows) -->
-      <div class="card col-span-3 row-span-2 bg-[#aed9e0] rounded-[20px] overflow-hidden relative py-[25px] px-[30px] cursor-pointer">
+      <!-- 4: Influencer Campaign -->
+      <div
+        class="card 
+               bg-[#aed9e0] rounded-[20px] overflow-hidden relative py-[25px] px-[30px]
+               cursor-pointer min-h-[280px]
+               lg:col-span-3 lg:row-span-2">
         <div class="card-overlay pointer-events-none absolute w-full h-full bg-[#1a1a1a] z-10 left-0 top-0 py-[25px] px-[30px] flex flex-col justify-between">
-          <h4 class="text-[24px] leading-[1.2] text-white font-bold">Influencer Campaign</h4>
-          <p class="text-[18px] text-white">
+          <h4 class="text-[22px] md:text-[24px] leading-[1.2] text-white font-bold">Influencer Campaign</h4>
+          <p class="text-[16px] md:text-[18px] text-white">
             From micro to macro, we connect you with creators that fit your brand voice—briefing, coordination, and performance tracking included.
           </p>
         </div>
-        <h2 class="text-[28px] text-[#1c2b42] uppercase leading-[1]">Influencer Campaign</h2>
-        <p class="absolute right-0 top-[85%] -translate-y-1/2 rotate-90 origin-center text-[14px] font-bold text-[#1a1a1a] uppercase">
+        <h2 class="text-[24px] md:text-[28px] text-[#1c2b42] uppercase leading-[1]">
+          Influencer Campaign
+        </h2>
+
+        <p
+          class="absolute right-[10%] top-[85%] -translate-y-1/2
+                 text-[12px] md:text-[14px] font-bold text-[#1a1a1a] uppercase 
+                 rotate-0 md:rotate-90 origin-center">
           76 Collabs
         </p>
       </div>
 
-      <!-- 5: Creative Campaign Designing (4 cols) -->
-      <div class="card col-span-4 bg-[#f5e1d8] rounded-[20px] overflow-hidden relative py-[25px] px-[30px] cursor-pointer min-h-[200px]">
+      <!-- 5: Creative Campaign Designing -->
+      <div
+        class="card 
+               bg-[#f5e1d8] rounded-[20px] overflow-hidden relative py-[25px] px-[30px]
+               cursor-pointer min-h-[200px]
+               lg:col-span-4">
         <div class="card-overlay pointer-events-none absolute w-full h-full bg-[#1a1a1a] z-10 left-0 top-0 py-[25px] px-[30px] flex flex-col justify-between">
-          <h4 class="text-[24px] leading-[1.2] text-white font-bold">Creative Campaign Designing</h4>
-          <p class="text-[18px] text-white">
+          <h4 class="text-[22px] md:text-[24px] leading-[1.2] text-white font-bold">Creative Campaign Designing</h4>
+          <p class="text-[16px] md:text-[18px] text-white">
             Smart, memorable campaigns—from ideation to execution—built to highlight what makes your brand different.
           </p>
         </div>
-        <h2 class="text-[28px] text-[#1c2b42] uppercase leading-[1]">Creative Campaign Designing</h2>
-        <p class="absolute right-0 top-[70%] -translate-y-1/2 rotate-90 origin-center text-[14px] font-bold text-[#1a1a1a] uppercase">
+        <h2 class="text-[24px] md:text-[28px] text-[#1c2b42] uppercase leading-[1]">
+          Creative Campaign Designing
+        </h2>
+
+        <p
+          class="absolute right-[10%]  top-[70%] -translate-y-1/2 
+                 text-[12px] md:text-[14px] font-bold text-[#1a1a1a] uppercase 
+                 rotate-0 md:rotate-90 origin-center">
           64 Launches
         </p>
       </div>
 
-      <!-- 6: Media Consultation (5 cols) -->
-      <div class="card col-span-5 bg-[#ffb703] rounded-[20px] overflow-hidden relative py-[25px] px-[30px] cursor-pointer min-h-[280px]">
+      <!-- 6: Media Consultation -->
+      <div
+        class="card 
+               bg-[#ffb703] rounded-[20px] overflow-hidden relative py-[25px] px-[30px]
+               cursor-pointer min-h-[280px]
+               lg:col-span-5">
         <div class="card-overlay pointer-events-none absolute w-full h-full bg-[#1a1a1a] z-10 left-0 top-0 py-[25px] px-[30px] flex flex-col justify-between">
-          <h4 class="text-[24px] leading-[1.2] text-white font-bold">Media Consultation</h4>
-          <p class="text-[18px] text-white">
+          <h4 class="text-[22px] md:text-[24px] leading-[1.2] text-white font-bold">Media Consultation</h4>
+          <p class="text-[16px] md:text-[18px] text-white">
             Online or offline? We help you choose the right mix—Instagram ads, radio, cinema, billboards—based on audience, goals, and budget.
           </p>
         </div>
-        <h2 class="text-[28px] text-[#1c2b42] uppercase leading-[1]">Media Consultation</h2>
-        <p class="absolute right-0 top-[70%] -translate-y-1/2 rotate-90 origin-center text-[14px] font-bold text-[#1a1a1a] uppercase">
+        <h2 class="text-[24px] md:text-[28px] text-[#1c2b42] uppercase leading-[1]">
+          Media Consultation
+        </h2>
+
+        <p
+          class="absolute right-[10%]  top-[70%] -translate-y-1/2 
+                 text-[12px] md:text-[14px] font-bold text-[#1a1a1a] uppercase 
+                 rotate-0 md:rotate-90 origin-center">
           46 Plans
         </p>
       </div>
 
-      <!-- 7: Creative Video Promotion (9 cols starting at col 4) -->
-      <div class="card col-start-4 col-span-9 bg-[#d3e4cd] rounded-[20px] overflow-hidden relative py-[25px] px-[30px] cursor-pointer min-h-[280px]">
+      <!-- 7: Creative Video Promotion -->
+      <div
+        class="card 
+               bg-[#d3e4cd] rounded-[20px] overflow-hidden relative py-[25px] px-[30px]
+               cursor-pointer min-h-[280px]
+               lg:col-start-4 lg:col-span-9">
         <div class="card-overlay pointer-events-none absolute w-full h-full bg-[#1a1a1a] z-10 left-0 top-0 py-[25px] px-[30px] flex flex-col justify-between">
-          <h4 class="text-[28px] leading-[1.2] text-white font-bold">Creative Video Promotion</h4>
-          <p class="text-[18px] text-white">
+          <h4 class="text-[22px] md:text-[28px] leading-[1.2] text-white font-bold">Creative Video Promotion</h4>
+          <p class="text-[16px] md:text-[18px] text-white">
             Videos that entertain, inform, and sell—planned to keep viewers watching till the end without the hard‑sell feel.
           </p>
         </div>
-        <h2 class="text-[28px] text-[#1c2b42] uppercase leading-[1]">Creative Video Promotion</h2>
-        <p class="absolute right-0 top-[70%] -translate-y-1/2 rotate-90 origin-center text-[14px] font-bold text-[#1a1a1a] uppercase">
+
+        <h2 class="text-[24px] md:text-[28px] text-[#1c2b42] uppercase leading-[1]">
+          Creative Video Promotion
+        </h2>
+
+        <p
+          class="absolute right-[10%]  top-[70%] -translate-y-1/2 
+                 text-[12px] md:text-[14px] font-bold text-[#1a1a1a] uppercase 
+                 rotate-0 md:rotate-90 origin-center">
           112 Videos
         </p>
       </div>
