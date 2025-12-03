@@ -31,9 +31,14 @@
   import five  from '~/assets/images/5s.PNG'
   import six from '~/assets/images/6s.PNG'
   import seven from '~/assets/images/7s.PNG'
-//   import eight from '~/assets/images/8s.png'
+  import eight from '~/assets/images/8s.JPEG'
   import nine from '~/assets/images/9s.JPEG'
   import ten from '~/assets/images/10s.PNG'
+  import eleven from '~/assets/images/11s.JPG'
+  import twelve from '~/assets/images/12s.JPG'
+  import thirteen from '~/assets/images/13s.JPEG'
+  import fourteen from '~/assets/images/14s.JPG'
+  import fifteen from '~/assets/images/15s.JPEG'
   const images = [
     one,
     two,
@@ -42,9 +47,14 @@
     five,
     six,
     seven,
- 
+    eight,
     nine,
-    ten
+    ten,
+    eleven,
+    twelve,
+    thirteen,
+    fourteen,
+    fifteen
     // add all yours here
   ];
   
