@@ -41,7 +41,7 @@
         <p
           class="absolute right-[10%]  top-[70%] -translate-y-1/2 
                  text-[12px] md:text-[14px] font-bold text-[#1a1a1a] uppercase 
-                 rotate-0 md:rotate-90 origin-center">
+                 rotate-0 md:rotate-90 origin-center md:right-0">
           151 Projects
         </p>
       </div>
@@ -63,7 +63,7 @@
         <p
           class="absolute right-[10%]  top-[70%] -translate-y-1/2 
                  text-[12px] md:text-[14px] font-bold text-[#1a1a1a] uppercase 
-                 rotate-0 md:rotate-90 origin-center">
+                 rotate-0 md:rotate-90 origin-center md:right-0">
           82 Clients
         </p>
       </div>
@@ -85,7 +85,7 @@
         <p
           class="absolute right-[10%]  top-[70%] -translate-y-1/2 
                  text-[12px] md:text-[14px] font-bold text-[#1a1a1a] uppercase 
-                 rotate-0 md:rotate-90 origin-center">
+                 rotate-0 md:rotate-90 origin-center md:right-0">
           47 Clients
         </p>
       </div>
@@ -109,7 +109,7 @@
         <p
           class="absolute right-[10%] top-[85%] -translate-y-1/2
                  text-[12px] md:text-[14px] font-bold text-[#1a1a1a] uppercase 
-                 rotate-0 md:rotate-90 origin-center">
+                 rotate-0 md:rotate-90 origin-center md:right-0">
           76 Collabs
         </p>
       </div>
@@ -133,7 +133,7 @@
         <p
           class="absolute right-[10%]  top-[70%] -translate-y-1/2 
                  text-[12px] md:text-[14px] font-bold text-[#1a1a1a] uppercase 
-                 rotate-0 md:rotate-90 origin-center">
+                 rotate-0 md:rotate-90 origin-center md:right-0">
           64 Launches
         </p>
       </div>
@@ -157,7 +157,7 @@
         <p
           class="absolute right-[10%]  top-[70%] -translate-y-1/2 
                  text-[12px] md:text-[14px] font-bold text-[#1a1a1a] uppercase 
-                 rotate-0 md:rotate-90 origin-center">
+                 rotate-0 md:rotate-90 origin-center md:right-0">
           46 Plans
         </p>
       </div>
@@ -180,10 +180,10 @@
         </h2>
 
         <p
-          class="absolute right-[10%]  top-[70%] -translate-y-1/2 
+          class="absolute right-[10%]  top-[70%] -translate-y-1/2 md:right-0
                  text-[12px] md:text-[14px] font-bold text-[#1a1a1a] uppercase 
                  rotate-0 md:rotate-90 origin-center">
-          112 Videos
+                112 Videos
         </p>
       </div>
     </div>
