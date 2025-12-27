@@ -1,6 +1,7 @@
 import nodemailer from 'nodemailer'
+import { defineEventHandler, readBody, createError } from 'h3'
 
-export default defineEventHandler(async (event:any) => {
+export default defineEventHandler(async (event: any) => {
   const body = await readBody(event)
 
   const { name, email, phone, message } = body
@@ -8,7 +9,7 @@ export default defineEventHandler(async (event:any) => {
   if (!name || !email || !phone) {
     throw createError({
       statusCode: 400,
-      statusMessage: 'Missing required fields'
+      statusMessage: 'Missing required fields',
     })
   }
 
@@ -18,14 +19,14 @@ export default defineEventHandler(async (event:any) => {
     secure: false,
     auth: {
       user: process.env.MAIL_USER,
-      pass: process.env.MAIL_PASS
-    }
+      pass: process.env.MAIL_PASS,
+    },
   })
 
   const mailOptions = {
-    from: `"Website Lead" <${process.env.MAIL_USER}>`,
+    from: process.env.MAIL_USER,
     to: process.env.MAIL_TO,
-    subject: `📩 New Contact Form Submission`,
+    subject: 'New Contact Form Submission',
     html: `
       <h2>New Lead</h2>
       <p><strong>Name:</strong> ${name}</p>
@@ -33,7 +34,7 @@ export default defineEventHandler(async (event:any) => {
       <p><strong>Phone:</strong> ${phone}</p>
       <p><strong>Message:</strong></p>
       <p>${message || '—'}</p>
-    `
+    `,
   }
 
   try {
@@ -43,7 +44,7 @@ export default defineEventHandler(async (event:any) => {
     console.error('Mail error:', error)
     throw createError({
       statusCode: 500,
-      statusMessage: 'Failed to send email'
+      statusMessage: 'Failed to send email',
     })
   }
 })
