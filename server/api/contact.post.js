@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer'
 import { defineEventHandler, readBody, createError } from 'h3'
 
-export default defineEventHandler(async (event :any) => {
+export default defineEventHandler(async (event) => {
   const body = await readBody(event)
 
   const name = body.name
@@ -35,10 +35,10 @@ export default defineEventHandler(async (event :any) => {
     '<p>' + message + '</p>'
 
   const mailOptions = {
-    from: process.env.MAIL_USER,   // 👈 THIS FIXES IT
+    from: process.env.MAIL_USER,
     to: process.env.MAIL_TO,
     subject: 'New Contact Form Submission',
-    html,
+    html: html,
   }
 
   try {
