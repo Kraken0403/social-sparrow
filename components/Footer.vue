@@ -27,15 +27,18 @@
           <div class="flex flex-wrap justify-center md:justify-center text-gray-400 gap-2 md:gap-4">
             <span>© 2025 Social Sparrow. All rights reserved.</span><span>·</span>
             <a href="#" class="hover:underline">Terms of use</a><span>·</span>
-            <a href="#" class="hover:underline">Privacy and cookie policy</a><span>·</span>
-            <a href="#" class="hover:underline">Manage cookies</a>
+            
+            <NuxtLink to="/privacy-policy" class="hover:underline">
+              Privacy and cookie policy
+            </NuxtLink>
+            <!-- <a href="#" class="hover:underline">Manage cookies</a> -->
           </div>
         </div>
   
         <!-- Right: Careers + Credit -->
         <div class="flex lg:w-[20%] flex-col items-center md:items-end text-right gap-2 whitespace-nowrap">
           <!-- <a href="#" class="hover:underline text-white">Careers</a> -->
-          <a href="https://novagram.com" target="_blank" class="text-sm text-gray-400 hover:underline">Website by Logion Solutions</a>
+          <a href="https://logionsolutions.com" target="_blank" class="text-sm text-gray-400 hover:underline">Website by Logion Solutions</a>
         </div>
       </div>
     </footer>

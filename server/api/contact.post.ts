@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer'
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async (event:any) => {
   const body = await readBody(event)
 
   const { name, email, phone, message } = body

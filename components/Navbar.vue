@@ -67,53 +67,56 @@
   </nav>
 
   <!-- MOBILE SLIDE-IN MENU -->
+  <Teleport to="body">
   <div
-    v-show="open"
+    v-if="open"
     ref="menuPanel"
-    style="right:-100%"
-    class="fixed top-0 bottom-0 right-0 w-[100%] h-[100vh] bg-[#EF1525] backdrop-blur-md z-[50] px-8 py-6
-           lg:hidden flex flex-col justify-center items-center rounded-none"
+    class="fixed inset-0 z-[9999] bg-[#EF1525]
+           flex flex-col justify-center items-center lg:hidden"
   >
-    <nav class="flex flex-col mt-[60px] space-y-[40px] text-center">
-      
-      <NuxtLink 
-        to="/"
-        @click="toggleMenu"
-        class="text-white font-bold uppercase"
-        :class="{ 'active-link': route.path === '/' }"
-      >
-        <h2 class="text-[32px] leading-none">Home</h2>
-      </NuxtLink>
 
-      <NuxtLink 
-        to="/about"
-        @click="toggleMenu"
-        class="text-white font-bold uppercase"
-        :class="{ 'active-link': route.path === '/about' }"
+    <!-- CLOSE ICON -->
+    <button
+      @click="toggleMenu"
+      aria-label="Close menu"
+      class="absolute top-[20px] right-[20px] text-white z-[10000]"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
       >
-        <h2 class="text-[32px] leading-none">About</h2>
-      </NuxtLink>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
 
-      <NuxtLink 
-        to="/services"
-        @click="toggleMenu"
-        class="text-white font-bold uppercase"
-        :class="{ 'active-link': route.path === '/services' }"
-      >
-        <h2 class="text-[32px] leading-none">Services</h2>
+    <!-- MENU -->
+    <nav class="flex flex-col space-y-[40px] text-center">
+      <NuxtLink to="/" @click="toggleMenu" class="text-white font-bold uppercase">
+        <h2 class="text-[32px]">Home</h2>
       </NuxtLink>
-
-      <NuxtLink 
-        to="/contact"
-        @click="toggleMenu"
-        class="text-white font-bold uppercase"
-        :class="{ 'active-link': route.path === '/contact' }"
-      >
-        <h2 class="text-[32px] leading-none">Contact</h2>
+      <NuxtLink to="/about" @click="toggleMenu" class="text-white font-bold uppercase">
+        <h2 class="text-[32px]">About</h2>
       </NuxtLink>
-
+      <NuxtLink to="/services" @click="toggleMenu" class="text-white font-bold uppercase">
+        <h2 class="text-[32px]">Services</h2>
+      </NuxtLink>
+      <NuxtLink to="/contact" @click="toggleMenu" class="text-white font-bold uppercase">
+        <h2 class="text-[32px]">Contact</h2>
+      </NuxtLink>
     </nav>
+
   </div>
+</Teleport>
+
+
 </template>
 
 <script setup>
@@ -128,26 +131,27 @@ const route = useRoute()
 
 function openMenu() {
   open.value = true
+  $lenis?.stop()
+
   nextTick(() => {
-    if (menuPanel.value) {
-      $gsap.fromTo(
-        menuPanel.value,
-        { right: '-100%' },
-        { right: '0%', duration: 0.45, ease: 'power2.out' }
-      )
-    }
+    $gsap.fromTo(
+      menuPanel.value,
+      { xPercent: 100 },
+      { xPercent: 0, duration: 0.45, ease: 'power2.out' }
+    )
   })
 }
 
 function closeMenu() {
-  if (menuPanel.value) {
-    $gsap.to(menuPanel.value, {
-      right: '-100%',
-      duration: 0.4,
-      ease: 'power2.in',
-      onComplete: () => { open.value = false }
-    })
-  }
+  $gsap.to(menuPanel.value, {
+    xPercent: 100,
+    duration: 0.4,
+    ease: 'power2.in',
+    onComplete: () => {
+      open.value = false
+      $lenis?.start()
+    }
+  })
 }
 
 function toggleMenu() {
